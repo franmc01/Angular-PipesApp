@@ -7,21 +7,93 @@
 
 <div class="p-grid">
   <div class="p-col-4">
-    <p-card header="uppercase"
-            [subheader]="nombreLower | uppercase">
-          {{ nombreLower }}
+    <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+      {{ nombreLower }}
     </p-card>
   </div>
   <div class="p-col-4">
-    <p-card header="lowercase"
-    [subheader]="nombreLower | lowercase">
-  {{ nombreUpper }}
-</p-card>
+    <p-card header="lowercase" [subheader]="nombreLower | lowercase">
+      {{ nombreUpper }}
+    </p-card>
   </div>
   <div class="p-col-4">
-    <p-card header="titlecase"
-    [subheader]="nombreCompleto | titlecase">
-  {{ nombreCompleto}}
-</p-card>
+    <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+      {{ nombreCompleto}}
+    </p-card>
   </div>
+</div>
+
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>
+    Con esto seremos capaces de modificar visualmente la fecha, a continuación unos ejemplos
+  </p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-3">
+    <p-card subheader ="Entrada">
+
+      <ul>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date:'short'</li>
+        <li>fecha | date:'medium'</li>
+        <li>fecha | date:'long'</li>
+        <li>fecha | date:'full'</li>
+        <li>fecha | date:'shortDate'</li>
+        <li>fecha | date:'mediumDate'</li>
+        <li>fecha | date:'longDate'</li>
+        <li>fecha | date:'fullDate'</li>
+        <li>fecha | date:'shortTime'</li>
+        <li>fecha | date:'mediumTime'</li>
+        <li>fecha | date:'longTime'</li>
+        <li>fecha | date:'fullTime'</li>
+      </ul>
+
+    </p-card>
+  </div>
+  <div class="p-col-6">
+    <p-card subheader ="Salida">
+
+      <ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date:'short' }}</li>
+        <li>{{ fecha | date:'medium' }}</li>
+        <li>{{ fecha | date:'long' }}</li>
+        <li>{{ fecha | date:'full' }}</li>
+        <li>{{ fecha | date:'shortDate' }}</li>
+        <li>{{ fecha | date:'mediumDate' }}</li>
+        <li>{{ fecha | date:'longDate' }}</li>
+        <li>{{ fecha | date:'fullDate' }}</li>
+        <li>{{ fecha | date:'shortTime' }}</li>
+        <li>{{ fecha | date:'mediumTime' }}</li>
+        <li>{{ fecha | date:'longTime' }}</li>
+        <li>{{ fecha | date:'fullTime' }}</li>
+      </ul>
+
+    </p-card>
+  </div>
+
+    <div class="p-col-3">
+      <p-card subheader="Fecha personalizada">
+        <ul>
+          <h6>Antes</h6>
+          <li>{{ fecha }}</li>
+        </ul>
+        <ul style="padding-bottom: 16px;">
+          <h6>Después</h6>
+          <li>{{ fecha | date:'dd MMMM Y' }}</li>
+          <li>{{ fecha | date:'d/MM/Y' }}</li>
+          <li>{{ fecha | date:'MMMM dd, yyyy' }}</li>
+          <li>{{ fecha | date:'EEEE dd, yyyy' }}</li>
+          <li>{{ fecha | date:'hh:mm aaaa' }}</li>
+          <li>{{ fecha | date:'HH:mm aaaa' }}</li>
+        </ul>
+
+      </p-card>
+    </div>
+
 </div>
