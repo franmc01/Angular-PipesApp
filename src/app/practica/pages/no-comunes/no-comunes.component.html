@@ -24,6 +24,33 @@
         <p-button label="Eliminar cliente" icon="pi pi-trash" styleClass="p-button-danger" (onClick)="eliminarCliente()"></p-button>
     </p-fieldset>
   </div>
+  <div class="p-col p-md-6">
+    <p-fieldset legend="Slice Pipe " [toggleable]="true">
+        <b>Original</b>
+        <pre>{{ clientes }}</pre>
+
+        <b>slice:0:2</b>
+        <pre>{{ clientes | slice:1:2 }}</pre>
+
+
+        <b>slice:2:1</b>
+        <pre>{{ clientes | slice:1:2 }}</pre>
+
+        <b>slice:2:1</b>
+        <pre>{{ persona.nombre | slice:0:4 }}</pre>
+
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset legend="KeyValue Pipe " [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          {{ item.key }}: {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
 
 
 </div>
