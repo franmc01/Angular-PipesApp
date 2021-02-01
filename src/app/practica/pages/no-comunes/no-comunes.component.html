@@ -10,18 +10,18 @@
 
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+          Hola {{ persona.nombre }}, es un placer {{ persona.genero | i18nSelect:mapping }} a este evento de premiación.
+      </p>
+      <p-button label="Cambiar persona" icon="pi pi-refresh" styleClass="p-button-help" (onClick)="cambiarPersona()"></p-button>
     </p-fieldset>
   </div>
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nPlural Pipe " [toggleable]="true">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+          Actualmente {{ clientes.length | i18nPlural:clientesMap }}
+        </p>
+        <p-button label="Eliminar cliente" icon="pi pi-trash" styleClass="p-button-danger" (onClick)="eliminarCliente()"></p-button>
     </p-fieldset>
   </div>
 
