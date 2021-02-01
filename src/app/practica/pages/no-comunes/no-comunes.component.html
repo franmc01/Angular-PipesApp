@@ -11,7 +11,7 @@
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
       <p>
-          Hola {{ persona.nombre }}, es un placer {{ persona.genero | i18nSelect:mapping }} a este evento de premiación.
+          Hola {{ persona.nombre }}, es un placer {{ persona.genero | i18nSelect:mapping }} al evento.
       </p>
       <p-button label="Cambiar persona" icon="pi pi-refresh" styleClass="p-button-help" (onClick)="cambiarPersona()"></p-button>
     </p-fieldset>
