@@ -24,7 +24,7 @@
         <p-button label="Eliminar cliente" icon="pi pi-trash" styleClass="p-button-danger" (onClick)="eliminarCliente()"></p-button>
     </p-fieldset>
   </div>
-  <div class="p-col p-md-6">
+  <div class="p-col p-md-5">
     <p-fieldset legend="Slice Pipe " [toggleable]="true">
         <b>Original</b>
         <pre>{{ clientes }}</pre>
@@ -41,8 +41,16 @@
 
     </p-fieldset>
   </div>
+  <div class="p-col p-md-3">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
 
-  <div class="p-col p-md-6">
+        <pre>{{ heroes | json }}</pre>
+
+
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-4">
     <p-fieldset legend="KeyValue Pipe " [toggleable]="true">
       <ul>
         <li *ngFor="let item of persona | keyvalue">

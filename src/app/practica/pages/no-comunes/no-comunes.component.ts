@@ -29,4 +29,20 @@ export class NoComunesComponent {
     this.clientes.shift();
   }
 
+    // JsonPipe
+    heroes = [
+      {
+        nombre: 'Superman',
+        vuela: true
+      },
+      {
+        nombre: 'Robin',
+        vuela: false
+      },
+      {
+        nombre: 'Aquaman',
+        vuela: false
+      },
+    ]
+
 }
