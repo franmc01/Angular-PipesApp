@@ -11,40 +11,42 @@
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
       <p>
-          Hola {{ persona.nombre }}, es un placer {{ persona.genero | i18nSelect:mapping }} al evento.
+        Hola {{ persona.nombre }}, es un placer {{ persona.genero | i18nSelect:mapping }} al evento.
       </p>
-      <p-button label="Cambiar persona" icon="pi pi-refresh" styleClass="p-button-help" (onClick)="cambiarPersona()"></p-button>
+      <p-button label="Cambiar persona" icon="pi pi-refresh" styleClass="p-button-help" (onClick)="cambiarPersona()">
+      </p-button>
     </p-fieldset>
   </div>
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nPlural Pipe " [toggleable]="true">
-        <p>
-          Actualmente {{ clientes.length | i18nPlural:clientesMap }}
-        </p>
-        <p-button label="Eliminar cliente" icon="pi pi-trash" styleClass="p-button-danger" (onClick)="eliminarCliente()"></p-button>
+      <p>
+        Actualmente {{ clientes.length | i18nPlural:clientesMap }}
+      </p>
+      <p-button label="Eliminar cliente" icon="pi pi-trash" styleClass="p-button-danger" (onClick)="eliminarCliente()">
+      </p-button>
     </p-fieldset>
   </div>
   <div class="p-col p-md-5">
     <p-fieldset legend="Slice Pipe " [toggleable]="true">
-        <b>Original</b>
-        <pre>{{ clientes }}</pre>
+      <b>Original</b>
+      <pre>{{ clientes }}</pre>
 
-        <b>slice:0:2</b>
-        <pre>{{ clientes | slice:1:2 }}</pre>
+      <b>slice:0:2</b>
+      <pre>{{ clientes | slice:1:2 }}</pre>
 
 
-        <b>slice:2:1</b>
-        <pre>{{ clientes | slice:1:2 }}</pre>
+      <b>slice:2:1</b>
+      <pre>{{ clientes | slice:1:2 }}</pre>
 
-        <b>slice:2:1</b>
-        <pre>{{ persona.nombre | slice:0:4 }}</pre>
+      <b>slice:2:1</b>
+      <pre>{{ persona.nombre | slice:0:4 }}</pre>
 
     </p-fieldset>
   </div>
   <div class="p-col p-md-3">
     <p-fieldset legend="Json Pipe" [toggleable]="true">
 
-        <pre>{{ heroes | json }}</pre>
+      <pre>{{ heroes | json }}</pre>
 
 
     </p-fieldset>
@@ -60,5 +62,12 @@
     </p-fieldset>
   </div>
 
+  <div class="p-col p-md-6">
+    <p-fieldset legend="Async Pipe " [toggleable]="true">
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre>
+      <pre>{{ valorPromesa | async }}</pre>
+      <pre>Observable: {{ miObservable | async }}</pre>
+    </p-fieldset>
+  </div>
 
 </div>
