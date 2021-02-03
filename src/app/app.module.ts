@@ -13,11 +13,12 @@ import { PracticaModule } from './practica/practica.module';
 import  localeEs  from "@angular/common/locales/es-EC";
 import { registerLocaleData } from "@angular/common";
 
+
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,

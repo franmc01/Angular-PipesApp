@@ -1,1 +1,8 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+  <h1>Pipes personalizados</h1>
+  <p>
+    Pipes creados por {{ 'nosotros' | mayusculas:cambiar }}
+  </p>
+
+  <p-button icon="pi pi-refresh" label="Toggle Mayus" (onClick)="cambiar = !cambiar"></p-button>
+</div>
