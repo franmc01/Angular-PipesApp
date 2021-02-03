@@ -12,6 +12,8 @@ import { PracticaModule } from './practica/practica.module';
 //Cambiar el locale de la app
 import  localeEs  from "@angular/common/locales/es-EC";
 import { registerLocaleData } from "@angular/common";
+// import { OrdenarPipe } from './pipes/ordenar.pipe';
+// import { VuelaPipe } from './pipes/vuela.pipe';
 
 
 registerLocaleData(localeEs);
@@ -19,6 +21,8 @@ registerLocaleData(localeEs);
 @NgModule({
   declarations: [
     AppComponent,
+    // OrdenarPipe,
+    // VuelaPipe,
   ],
   imports: [
     AppRoutingModule,

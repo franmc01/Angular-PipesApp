@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Color, Heroe } from '../../models/heroe.model';
 
@@ -9,6 +10,8 @@ import { Color, Heroe } from '../../models/heroe.model';
 export class OrdenarComponent implements OnInit {
 
   cambiar:boolean = true;
+
+  ordenarPor:string = 'sin-valor';
 
   heroes:Heroe[] = [
     {
@@ -33,7 +36,7 @@ export class OrdenarComponent implements OnInit {
     },
     {
       nombre: 'Black Widow',
-      vuela: false,
+      vuela: true,
       color: Color.negro
     }
   ]
@@ -41,6 +44,11 @@ export class OrdenarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  ordenarDinamicamente(valor:string){
+    this.ordenarPor = valor;
   }
 
 }
